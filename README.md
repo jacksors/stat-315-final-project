@@ -2,5 +2,5 @@
 ## Authors
  - Jackson Stone
  - Rhiannon Stracener
- - Nikki Radd
+ - Nikki Rad
  - Kim Chen
