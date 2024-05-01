@@ -3,13 +3,14 @@ LABEL maintainer="Jackson Stone <jacksors@tamu.edu>"
 LABEL maintainer="Rhiannon Stracener <stracenerrk@tamu.edu>"
 LABEL maintainer="Nikki Rad <nikkiraddd@tamu.edu>"
 LABEL maintainer="Kim Chen <kimcchen@tamu.edu>"
-LABEL version="0.1"
+LABEL version="1.0"
 LABEL description="STAT 315/ECEN 360 final project docker image. An analysis on diabetes-related readmission rates."
 
 RUN apt-get update -y
 RUN apt-get install -y gcc
 RUN apt-get install -y build-essential libpq-dev
 RUN apt-get install -y graphviz
+RUN apt-get install -y texlive texlive-latex-extra texlive-xetex pandoc # these allow exporting to pdf
 
 RUN pip install --upgrade pip
 
@@ -22,7 +23,8 @@ RUN pip install \
     numpy==1.26.4 \
     pandas==2.2.2 \
     statsmodels==0.14.2 \
-    scikit-learn==1.4.2
+    scikit-learn==1.4.2 \
+    plotly==5.21.0
 
 WORKDIR /home/notebooks/
 
